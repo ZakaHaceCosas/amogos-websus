@@ -7,4 +7,4 @@ Current maintenance mainly by Nooz
 
 (POWERRRR by Moon1789)
 
-### **Website link: https://amogos.studio/**
+### **Website link: https://amog-os.github.io/website/**
