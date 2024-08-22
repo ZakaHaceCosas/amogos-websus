@@ -1,5 +1,7 @@
+/* contributors page */
 .bois {
     width: 90%;
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     gap: 10px;
@@ -7,12 +9,23 @@
 
 .coolboi {
     position: relative;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     text-align: left;
     padding: 1em;
     border-radius: 10px;
@@ -20,7 +33,8 @@
     background-color: var(--amog-black-transparent);
     overflow: hidden;
     aspect-ratio: 1/1;
-    animation: coolboi-in 250ms cubic-bezier(0.6, 0, 0, 1);
+    -webkit-animation: coolboi-in 250ms cubic-bezier(0.6, 0, 0, 1);
+            animation: coolboi-in 250ms cubic-bezier(0.6, 0, 0, 1);
 
     &.not1x1 {
         aspect-ratio: unset;
@@ -43,26 +57,42 @@
         font-size: 12px;
         font-weight: 500;
         color: var(--amog-black);
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
     }
 
     & img {
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(1.2);
-        filter: brightness(0.5) blur(4px) grayscale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1.2);
+            -ms-transform: translate(-50%, -50%) scale(1.2);
+                transform: translate(-50%, -50%) scale(1.2);
+        -webkit-filter: brightness(0.5) blur(4px) grayscale(1);
+                filter: brightness(0.5) blur(4px) grayscale(1);
         width: 100%;
         position: absolute;
         z-index: -1;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
 
     & .links {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         gap: 1em;
-        align-items: center;
-        justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         text-align: left;
     }
 
@@ -70,24 +100,49 @@
         border: solid 2px var(--amog-green);
 
         & img {
-            filter: brightness(0.5) blur(2px) grayscale(0);
-            transform: translate(-50%, -50%) scale(1);
+            -webkit-filter: brightness(0.5) blur(2px) grayscale(0);
+                    filter: brightness(0.5) blur(2px) grayscale(0);
+            -webkit-transform: translate(-50%, -50%) scale(1);
+                -ms-transform: translate(-50%, -50%) scale(1);
+                    transform: translate(-50%, -50%) scale(1);
         }
+    }
+}
+
+@-webkit-keyframes coolboi-in {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 }
 
 @keyframes coolboi-in {
     0% {
         opacity: 0;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 
     50% {
         opacity: 1;
-        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
     }
 
     100% {
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 }

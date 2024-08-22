@@ -1,21 +1,29 @@
 nav {
-
     position: fixed;
     height: auto;
     z-index: 69420; /* a. */
     padding: 4px;
 
     background-color: var(--amog-black-transparenter);
-    backdrop-filter: blur(8px) brightness(75%) saturate(150%) contrast(75%);
+    -webkit-backdrop-filter: blur(8px) brightness(75%) saturate(150%) contrast(75%);
+            backdrop-filter: blur(8px) brightness(75%) saturate(150%) contrast(75%);
     width: 100vw;
+    -webkit-transition: top 0.3s;
+    -o-transition: top 0.3s;
     transition: top 0.3s;
 
     & a {
         font-weight: 400;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         gap: .5em;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         float: left;
         color: #f2f2f2;
@@ -26,6 +34,8 @@ nav {
         border-radius: 0.5em;
 
         &:first-child {
+            background: -webkit-gradient(linear, left top, right top, from(var(--amog-blue)), to(var(--amog-green)));
+            background: -o-linear-gradient(left, var(--amog-blue), var(--amog-green));
             background: linear-gradient(to right, var(--amog-blue), var(--amog-green));
             color: black;
             font-weight: 700;

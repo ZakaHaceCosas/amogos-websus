@@ -1,20 +1,21 @@
-
 @media prefers-reduced-motion {
     * {
         /*noinspection CssUnknownProperty*/
+        -webkit-transition: none !important;
+        -o-transition: none !important;
         transition: none !important;
         scroll-behavior: auto !important;
     }
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 900px) {
     footer {
-        grid-template-areas:
+            grid-template-areas:
       "logo"
       "text"
       "links"
       "social";
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
 
         .footer__subsection {
@@ -44,10 +45,21 @@
             z-index: 100;
             aspect-ratio: 1/1;
 
+            display: -webkit-box;
+
+            display: -ms-flexbox;
+
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
 
             float: right;
             text-align: right;
@@ -69,7 +81,8 @@
                 height: 100vh;
                 z-index: 1;
                 background-color: var(--amog-black-transparent);
-                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                        backdrop-filter: blur(8px);
             }
         }
     }
@@ -89,18 +102,26 @@
     }
 
     .buttons {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 10px;
 
         & .button, & button {
-            flex: 1;
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
             width: 100%;
         }
 
     }
 
     .feature {
-        flex-direction: column !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+                flex-direction: column !important;
         border-radius: 20px;
 
         & img, & .lbl {
@@ -108,9 +129,13 @@
         }
 
         & .lbl {
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             justify-items: center;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
 
             & h1, & p {
                 text-align: center;

@@ -1,33 +1,59 @@
 /* Misc. */
-
 body {
     background-color: var(--amog-blacky);
     color: #FFF;
     font-family: "Poppins", sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     overflow-x: hidden;
 }
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
 }
 
 section {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 20px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     width: 100vw;
     max-width: 1280px;
@@ -38,24 +64,37 @@ hr {
     height: 2px;
     border: none;
     border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(var(--amog-blue)), to(var(--amog-green)));
+    background-image: -o-linear-gradient(top left, var(--amog-blue), var(--amog-green));
     background-image: linear-gradient(to bottom right, var(--amog-blue), var(--amog-green));
 }
-
 
 /* Header */
 header {
     width: 100vw;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 20px;
     background-image: url(../img/sus-on-moon.jpg);
     background-position: 100% 50%;
     background-size: cover;
-    box-shadow: 0 0 20px 0 #000;
+    -webkit-box-shadow: 0 0 20px 0 #000;
+            box-shadow: 0 0 20px 0 #000;
     text-align: center;
+    -webkit-transition: unset;
+    -o-transition: unset;
     transition: unset;
 }
 
@@ -65,6 +104,8 @@ header h1 {
 
 header h1 span {
     font-size: 70px;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(var(--amog-green)), to(var(--amog-blue)));
+    background-image: -o-linear-gradient(top left, var(--amog-green), var(--amog-blue));
     background-image: linear-gradient(to bottom right, var(--amog-green), var(--amog-blue));
     white-space: nowrap;
     background-clip: text;
@@ -74,10 +115,19 @@ header h1 span {
 
 .container {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #toppat {
@@ -90,13 +140,16 @@ header h1 span {
         top: -30px;
         right: 50%;
         z-index: -1;
+        -webkit-transition: all 500ms cubic-bezier(0.6, 0, 0, 1);
+        -o-transition: all 500ms cubic-bezier(0.6, 0, 0, 1);
         transition: all 500ms cubic-bezier(0.6, 0, 0, 1);
     }
 }
 
 /* Footer */
 footer {
-
+    background: -webkit-gradient(linear, left top, right bottom, from(var(--amog-blue-transparent)), to(var(--amog-green-transparent))), url("../img/airship.png");
+    background: -o-linear-gradient(top left, var(--amog-blue-transparent), var(--amog-green-transparent)), url("../img/airship.png");
     background: linear-gradient(to bottom right, var(--amog-blue-transparent), var(--amog-green-transparent)), url("../img/airship.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -107,13 +160,19 @@ footer {
     max-width: 1200px;
     margin: 2em;
 
+    display: -ms-grid;
+
     display: grid;
-    grid-template-areas:
+        grid-template-areas:
         "logo logo empty"
         "text links social";
     gap: 0.25em;
 
     .footer__text {
+        grid-row: 3;
+        grid-column: 1;
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
         grid-area: text;
         font-size: 1rem;
         font-weight: 500;
@@ -121,16 +180,23 @@ footer {
     }
 
     .logo {
+        grid-row: 1;
+        grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
         grid-area: logo;
 
         & img {
             background-color: var(--amog-black-transparenter);
-            backdrop-filter: blur(10px) brightness(75%);
+            -webkit-backdrop-filter: blur(10px) brightness(75%);
+                    backdrop-filter: blur(10px) brightness(75%);
             padding: 0.5em 1em;
             border-radius: 2em;
             width: 100%;
             max-width: 13em;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             position: relative;
             top: 0;
             left: 0;
@@ -141,10 +207,18 @@ footer {
 
 .footer__subsection {
     background-color: var(--amog-black-transparenter);
-    backdrop-filter: blur(10px) brightness(75%);
+    -webkit-backdrop-filter: blur(10px) brightness(75%);
+            backdrop-filter: blur(10px) brightness(75%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding: 1em;
     border-radius: 2em;
     overflow: visible;
@@ -164,6 +238,10 @@ footer {
 }
 
 .footer__links {
+    grid-row: 3;
+    grid-column: 3;
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
     grid-area: links;
 }
 
@@ -173,6 +251,8 @@ footer {
     width: auto;
     font-weight: 700;
     color: var(--amog-green);
+    -webkit-transition: all 0.25s cubic-bezier(0.6, 0, 0, 1);
+    -o-transition: all 0.25s cubic-bezier(0.6, 0, 0, 1);
     transition: all 0.25s cubic-bezier(0.6, 0, 0, 1);
 
     &:hover, &:focus {
