@@ -1,0 +1,33 @@
+/* sussify, AKA making your pc sus, AKA downloads page */
+
+/*
+i admit this is not the best way to make the art fit, but well...
+"if it works, don't touch it" - some wise developer, perchance.
+*/
+
+.moveToTheLeftIdiots {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    max-width: 50%;
+    margin-right: auto;
+    margin-left: 5%;
+    min-height: 400px;
+}
+
+.moveToTheLeftIdiots ul {
+    list-style-type: none;
+}
+
+.moveToTheLeftIdiots ul li {
+    word-wrap: break-word;
+}
+
+.sussy-wussy-art {
+    position: absolute;
+    height: 400px;
+    right: 5%;
+    z-index: -1;
+}
