@@ -23,7 +23,7 @@ duckduckgo search engine has pretty nice minify/prettify, just search "CSS minif
 @import url("navbar.css"); /* Contains nav, #menu, .overlay */
 @import url("contributors.css"); /* Contains .coolboi, .bois */
 @import url("features.css"); /* Contains styles for features */
-@import url("media-queries.css"); /* why each sussy display has a different sice oh my lord */
+@import url("media-queries.css"); /* why each sussy display has a different size oh my lord */
 @import url("sussify.css"); /* Contains specific styles for the downloads page */
 
 /* Base styles */
