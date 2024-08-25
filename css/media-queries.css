@@ -143,4 +143,28 @@
             }
         }
     }
+
+    .moveToTheLeftIdiots {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: center;
+        width: auto;
+        flex: 1;
+    }
+    
+    .moveToTheLeftIdiots ul {
+        list-style-type: none;
+    }
+    
+    .moveToTheLeftIdiots ul li {
+        word-wrap: break-word;
+    }
+    
+    .sussy-wussy-art {
+        position: static;
+        height: 400px;
+        z-index: auto;
+    }
 }
