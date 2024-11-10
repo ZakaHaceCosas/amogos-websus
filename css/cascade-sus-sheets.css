@@ -80,3 +80,8 @@ code {
 .scroll-animation {
     opacity: 1;
 }
+
+::selection{
+    background-color: #66ddcc10;
+    color: #66ddcc;
+}
