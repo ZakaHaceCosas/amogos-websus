@@ -224,14 +224,26 @@ READ INDEX.html FOR FULL DOCUMENTATION OF THIS CODE
                             src="img/sus_art.png"
                             alt="AmogOS art"
                             class="sussy-wussy-art"
+                            style="user-select: none"
+                            id="image"
                         />
+                        <script>
+                            // don't steal
+                            document
+                                .getElementById("image")
+                                .addEventListener("contextmenu", function (e) {
+                                    e.preventDefault();
+                                    console.log("bro tried to steal");
+                                });
+                        </script>
                         <p class="column-title">
                             AmogOS-chan by
                             <a
                                 href="https://www.instagram.com/xyriiel/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                >xyriiel</a
+                            >
+                                xyriiel</a
                             >. No r34 yet (for now?!?!).
                         </p>
                     </div>
