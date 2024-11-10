@@ -5,28 +5,28 @@ i admit this is not the best way to make the art fit, but well...
 "if it works, don't touch it" - some wise developer, perchance.
 */
 
-.moveToTheLeftIdiots {
+/* by far not the best CSS, but it's sus and yet it somehow works */
+
+.alignCorrectlyIdiots {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    max-width: 50%;
-    margin-right: auto;
-    margin-left: 5%;
-    min-height: 400px;
+    flex: 1;
+    max-width: 90%;
+    min-height: 450px;
 }
-
-.moveToTheLeftIdiots ul {
+.alignCorrectlyIdiots .idiot-container ul {
     list-style-type: none;
 }
 
-.moveToTheLeftIdiots ul li {
+.alignCorrectlyIdiots .idiot-container ul li {
     word-wrap: break-word;
 }
 
+.sussy-art-container,
 .sussy-wussy-art {
-    position: absolute;
     height: 400px;
     right: 5%;
     z-index: -1;
