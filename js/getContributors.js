@@ -16,7 +16,7 @@ async function getContributorExtraInfo(user, repo) {
     const url = `${githubApiUrl}/users/${user}`;
     const response = await fetch(url);
     const data = await response.json();
-    data.repo = repo;
+    if (repo) data.repo = repo;
     return await data;
 }
 
@@ -28,21 +28,23 @@ async function getContributorExtraInfo(user, repo) {
  * @returns {Promise<JSON>} The contributors of the project
  */
 async function getContributors(org, repo) {
-    const url = `${githubApiUrl}/repos/${org}/${repo}/contributors`;
-    const response = await fetch(url);
-    const data = await response.json();
-
     try {
+        const url = `${githubApiUrl}/repos/${org}/${repo}/contributors`;
+        const response = await fetch(url, {
+            headers: { Accept: "application/vnd.github.v3+json" },
+        });
+        const data = await response.json();
+
         if (data.message.startsWith(`API rate limit exceeded`)) {
             console.error(`Rate limit exceeded!`);
             return [];
         }
+
+        for (let i = 0; i < data.length; i++) data[i].repo = repo;
+        return data;
     } catch (e) {
         console.error(`Error while checking rate limit: ${e}`);
     }
-
-    for (let i = 0; i < data.length; i++) data[i].repo = repo;
-    return data;
 }
 
 /**
@@ -72,6 +74,10 @@ async function populateContributors() {
         `contributorsContainer`
     );
 
+    if (!contributorsContainer) {
+        throw new Error("No contributorsContainer!");
+    }
+
     for (let i = 0; i < contributors.length; i++) {
         const contributorLogin = contributors[i].login;
         if (contributorLogin === undefined) continue;
@@ -97,10 +103,12 @@ async function populateContributors() {
             contributor.type === `User` ? `Contributor` : contributor.type;
 
         // Add a role for repo the contributor has contributed to
-        const repo = document.createElement(`div`);
-        repo.classList.add(`role`);
-        repo.innerText = contributor.repo;
-        card.appendChild(repo);
+        if (contributor.repo) {
+            const repo = document.createElement(`div`);
+            repo.classList.add(`role`);
+            repo.innerText = contributor.repo;
+            card.appendChild(repo);
+        }
 
         const h3 = document.createElement(`p`);
         h3.innerHTML = `<span>"</span>${
