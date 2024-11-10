@@ -3,7 +3,7 @@
  *               contributors page
  */
 
-const githubApiUrl = `https://api.github.com`
+const githubApiUrl = `https://api.github.com`;
 const CACHE_EXPIRATION_MS = 24 * 60 * 60 * 1000; // 24 hr
 
 /**
@@ -12,11 +12,10 @@ const CACHE_EXPIRATION_MS = 24 * 60 * 60 * 1000; // 24 hr
  * @param {string} user Username of the contributor
  * @returns {Promise<JSON>} The extra information of the contributor
  */
-
 async function getContributorExtraInfo(user, repo) {
-    const url = `${githubApiUrl}/users/${user}`
-    const response = await fetch(url)
-    const data = await response.json()
+    const url = `${githubApiUrl}/users/${user}`;
+    const response = await fetch(url);
+    const data = await response.json();
     data.repo = repo;
     return await data;
 }
@@ -28,19 +27,18 @@ async function getContributorExtraInfo(user, repo) {
  * @param {string} repo Repository name
  * @returns {Promise<JSON>} The contributors of the project
  */
-
 async function getContributors(org, repo) {
-    const url = `${githubApiUrl}/repos/${org}/${repo}/contributors`
-    const response = await fetch(url)
-    const data = await response.json()
+    const url = `${githubApiUrl}/repos/${org}/${repo}/contributors`;
+    const response = await fetch(url);
+    const data = await response.json();
 
     try {
         if (data.message.startsWith(`API rate limit exceeded`)) {
-            console.error(`Rate limit exceeded!`)
-            return []
+            console.error(`Rate limit exceeded!`);
+            return [];
         }
     } catch (e) {
-        console.error(`Error while checking rate limit: ${e}`)
+        console.error(`Error while checking rate limit: ${e}`);
     }
 
     for (let i = 0; i < data.length; i++) data[i].repo = repo;
@@ -53,11 +51,14 @@ async function getContributors(org, repo) {
  *              Note that the client may be rate limited by the GitHub API.
  * @returns {Promise<void>}
  */
-
 async function populateContributors() {
-
     const organisation = `amog-os`;
-    const repos = [`AmogOS`, `AmogOStopPat`, `AmogOS-Wallpapers`, `Amog-OS.github.io`];
+    const repos = [
+        `AmogOS`,
+        `AmogOStopPat`,
+        `AmogOS-Wallpapers`,
+        `Amog-OS.github.io`,
+    ];
 
     let contributors = [];
 
@@ -67,7 +68,9 @@ async function populateContributors() {
         contributors = contributors.concat(repoContributors);
     }
 
-    const contributorsContainer = document.getElementById(`contributorsContainer`);
+    const contributorsContainer = document.getElementById(
+        `contributorsContainer`
+    );
 
     for (let i = 0; i < contributors.length; i++) {
         const contributorLogin = contributors[i].login;
@@ -90,7 +93,8 @@ async function populateContributors() {
 
         const card = document.createElement(`div`);
         card.classList.add(`role`);
-        card.innerText = contributor.type === `User` ? `Contributor` : contributor.type;
+        card.innerText =
+            contributor.type === `User` ? `Contributor` : contributor.type;
 
         // Add a role for repo the contributor has contributed to
         const repo = document.createElement(`div`);
@@ -98,9 +102,10 @@ async function populateContributors() {
         repo.innerText = contributor.repo;
         card.appendChild(repo);
 
-
         const h3 = document.createElement(`p`);
-        h3.innerHTML = `<span>"</span>${contributor.bio || `No bio provided`}<span>"</span>`;
+        h3.innerHTML = `<span>"</span>${
+            contributor.bio || `No bio provided`
+        }<span>"</span>`;
 
         const links = document.createElement(`div`);
         links.classList.add(`links`);
@@ -114,7 +119,10 @@ async function populateContributors() {
         ghLink.appendChild(githubIcon);
 
         const websiteLink = document.createElement(`a`);
-        if (contributor.blog) websiteLink.href = contributor.blog.includes(`http`) ? contributor.blog : `https://${contributor.blog}`;
+        if (contributor.blog)
+            websiteLink.href = contributor.blog.includes(`http`)
+                ? contributor.blog
+                : `https://${contributor.blog}`;
 
         const websiteIcon = document.createElement(`i`);
         websiteIcon.classList.add(`nf-fa-link`);
@@ -137,13 +145,13 @@ async function populateContributors() {
 }
 
 function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function cacheContributor(login, data) {
     const cacheData = {
         data,
-        timestamp: Date.now()
+        timestamp: Date.now(),
     };
 
     localStorage.setItem(`contributor_${login}`, JSON.stringify(cacheData));
@@ -153,7 +161,7 @@ function getCachedContributor(login) {
     const cachedData = localStorage.getItem(`contributor_${login}`);
 
     if (cachedData) {
-        const {data, timestamp} = JSON.parse(cachedData);
+        const { data, timestamp } = JSON.parse(cachedData);
         const currentTime = Date.now();
 
         if (currentTime - timestamp < CACHE_EXPIRATION_MS) return data;
@@ -163,8 +171,6 @@ function getCachedContributor(login) {
     return null;
 }
 
-populateContributors().then(r =>
-    console.log(`Contributors populated!`)
-).catch(e =>
-    console.error(`Error while populating contributors: ${e}`)
-)
+populateContributors()
+    .then((r) => console.log(`Contributors populated!`))
+    .catch((e) => console.error(`Error while populating contributors: ${e}`));

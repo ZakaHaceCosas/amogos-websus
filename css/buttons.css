@@ -5,8 +5,8 @@
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     gap: 1em;
 }
 
@@ -16,17 +16,18 @@
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     gap: 0.2em;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 
-    :nth-child(odd), :nth-child(even) {
+    :nth-child(odd),
+    :nth-child(even) {
         -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
+        -ms-flex: 1;
+        flex: 1;
     }
 
     :first-child {
@@ -40,7 +41,6 @@
     :not(:first-child):not(:last-child) {
         border-radius: 0.2em;
     }
-
 }
 
 input {
@@ -57,28 +57,30 @@ input {
     background-color: var(--amog-green-transparent);
     color: #000;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         background-color: transparent;
         border: solid 2px var(--amog-green);
         color: var(--amog-green);
 
         -webkit-box-shadow: 0 0 0 1px var(--amog-green-transparent),
-        0 2px 4px var(--amog-green-transparent),
-        0 4px 8px var(--amog-green-transparent),
-        0 8px 16px var(--amog-green-transparent),
-        0 16px 32px var(--amog-green-transparent),
-        0 32px 64px var(--amog-green-transparent);
+            0 2px 4px var(--amog-green-transparent),
+            0 4px 8px var(--amog-green-transparent),
+            0 8px 16px var(--amog-green-transparent),
+            0 16px 32px var(--amog-green-transparent),
+            0 32px 64px var(--amog-green-transparent);
 
-                box-shadow: 0 0 0 1px var(--amog-green-transparent),
-        0 2px 4px var(--amog-green-transparent),
-        0 4px 8px var(--amog-green-transparent),
-        0 8px 16px var(--amog-green-transparent),
-        0 16px 32px var(--amog-green-transparent),
-        0 32px 64px var(--amog-green-transparent);
+        box-shadow: 0 0 0 1px var(--amog-green-transparent),
+            0 2px 4px var(--amog-green-transparent),
+            0 4px 8px var(--amog-green-transparent),
+            0 8px 16px var(--amog-green-transparent),
+            0 16px 32px var(--amog-green-transparent),
+            0 32px 64px var(--amog-green-transparent);
     }
 }
 
-button, .button {
+button,
+.button {
     padding: 0.6em 1em;
     border-radius: 1em;
     font-size: 16px;
@@ -92,82 +94,89 @@ button, .button {
     transition: 0.3s;
 }
 
-.btn-prim, .primary {
+.btn-prim,
+.primary {
     background-color: var(--amog-green);
     color: #000;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         background-color: var(--amog-green-transparent);
         border: solid 2px var(--amog-green);
         color: var(--amog-green);
 
         -webkit-box-shadow: 0 0 0 1px var(--amog-green-transparent),
-        0 2px 4px var(--amog-green-transparent),
-        0 4px 8px var(--amog-green-transparent),
-        0 8px 16px var(--amog-green-transparent),
-        0 16px 32px var(--amog-green-transparent),
-        0 32px 64px var(--amog-green-transparent);
+            0 2px 4px var(--amog-green-transparent),
+            0 4px 8px var(--amog-green-transparent),
+            0 8px 16px var(--amog-green-transparent),
+            0 16px 32px var(--amog-green-transparent),
+            0 32px 64px var(--amog-green-transparent);
 
-                box-shadow: 0 0 0 1px var(--amog-green-transparent),
-        0 2px 4px var(--amog-green-transparent),
-        0 4px 8px var(--amog-green-transparent),
-        0 8px 16px var(--amog-green-transparent),
-        0 16px 32px var(--amog-green-transparent),
-        0 32px 64px var(--amog-green-transparent);
+        box-shadow: 0 0 0 1px var(--amog-green-transparent),
+            0 2px 4px var(--amog-green-transparent),
+            0 4px 8px var(--amog-green-transparent),
+            0 8px 16px var(--amog-green-transparent),
+            0 16px 32px var(--amog-green-transparent),
+            0 32px 64px var(--amog-green-transparent);
     }
 }
 
-.btn-sec, .secondary {
+.btn-sec,
+.secondary {
     background-color: var(--amog-blue-transparent);
     border: solid 2px var(--amog-blue);
     color: var(--amog-blue);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         background-color: var(--amog-blue);
         color: #000;
 
         -webkit-box-shadow: 0 0 0 1px var(--amog-blue-transparent),
-        0 2px 4px var(--amog-blue-transparent),
-        0 4px 8px var(--amog-blue-transparent),
-        0 8px 16px var(--amog-blue-transparent),
-        0 16px 32px var(--amog-blue-transparent),
-        0 32px 64px var(--amog-blue-transparent);
+            0 2px 4px var(--amog-blue-transparent),
+            0 4px 8px var(--amog-blue-transparent),
+            0 8px 16px var(--amog-blue-transparent),
+            0 16px 32px var(--amog-blue-transparent),
+            0 32px 64px var(--amog-blue-transparent);
 
-                box-shadow: 0 0 0 1px var(--amog-blue-transparent),
-        0 2px 4px var(--amog-blue-transparent),
-        0 4px 8px var(--amog-blue-transparent),
-        0 8px 16px var(--amog-blue-transparent),
-        0 16px 32px var(--amog-blue-transparent),
-        0 32px 64px var(--amog-blue-transparent);
+        box-shadow: 0 0 0 1px var(--amog-blue-transparent),
+            0 2px 4px var(--amog-blue-transparent),
+            0 4px 8px var(--amog-blue-transparent),
+            0 8px 16px var(--amog-blue-transparent),
+            0 16px 32px var(--amog-blue-transparent),
+            0 32px 64px var(--amog-blue-transparent);
     }
 }
 
-
-.btn-third, .third {
+.btn-third,
+.third {
     background-color: var(--amog-black-transparent);
     border: solid 2px var(--amog-black-plus);
-    color: #FFF;
+    color: #fff;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         background-color: var(--amog-black-plus);
 
         -webkit-box-shadow: 0 0 0 1px var(--amog-blacky-transparent),
-        0 2px 4px var(--amog-blacky-transparent),
-        0 4px 8px var(--amog-blacky-transparent),
-        0 8px 16px var(--amog-blacky-transparent),
-        0 16px 32px var(--amog-blacky-transparent),
-        0 32px 64px var(--amog-blacky-transparent);
+            0 2px 4px var(--amog-blacky-transparent),
+            0 4px 8px var(--amog-blacky-transparent),
+            0 8px 16px var(--amog-blacky-transparent),
+            0 16px 32px var(--amog-blacky-transparent),
+            0 32px 64px var(--amog-blacky-transparent);
 
-                box-shadow: 0 0 0 1px var(--amog-blacky-transparent),
-        0 2px 4px var(--amog-blacky-transparent),
-        0 4px 8px var(--amog-blacky-transparent),
-        0 8px 16px var(--amog-blacky-transparent),
-        0 16px 32px var(--amog-blacky-transparent),
-        0 32px 64px var(--amog-blacky-transparent);
+        box-shadow: 0 0 0 1px var(--amog-blacky-transparent),
+            0 2px 4px var(--amog-blacky-transparent),
+            0 4px 8px var(--amog-blacky-transparent),
+            0 8px 16px var(--amog-blacky-transparent),
+            0 16px 32px var(--amog-blacky-transparent),
+            0 32px 64px var(--amog-blacky-transparent);
     }
 }
 
-button, .button, a {
+button,
+.button,
+a {
     outline: 2px solid transparent;
 }
 
@@ -176,11 +185,15 @@ a {
     text-decoration: none;
     font-weight: 900;
 
-    &:focus, &:focus-within {
+    &:focus,
+    &:focus-within {
         outline: 2px solid var(--amog-hightlight);
     }
 }
 
-a:hover, a:focus, a:active, span {
+a:hover,
+a:focus,
+a:active,
+span {
     color: var(--amog-blue);
 }
