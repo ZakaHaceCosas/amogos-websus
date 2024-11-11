@@ -45,7 +45,7 @@
             name="keywords"
             content="sus, susOS, amogOS, among us OS, amogOS linux, among us linux, sussy os, sussy baka, sussy wussy"
         />
-        <!--keywords for better locating, in case website gets indexed on search engines, like Gogoglgoe, Microsoft Bing, DuckDuckGo, Swiftly Nature, Ecosia... (for now it's not on google btw)-->
+        <!--keywords for better locating, in case website gets indexed on search engines, like Google, Microsoft Bing, DuckDuckGo, Swiftly Nature, Ecosia... (for now it's not on google btw)-->
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -85,7 +85,7 @@
             }
 
             .highlight {
-                color: var(--amog-hightlight) !important;
+                color: var(--amog-highlight) !important;
             }
 
             #quote {
@@ -209,12 +209,17 @@
 
                 <script>
                     function randomQuote() {
-                        fetch("https://api.quotable.io/random")
-                            .then((response) => response.json())
-                            .then((data) => {
-                                document.querySelector("#quote").innerHTML =
-                                    data.content;
-                            });
+                        const quotes = [
+                            "AmogOS is cool!!",
+                            "Sussy wussy",
+                            "Type 'se:ENGINE_URL' to change your search engine.",
+                            "Type 'eng:ENGINE_URL' to change your search engine.",
+                            "Type 'engine:ENGINE_URL' to change your search engine.",
+                            "Not a sussy random quote",
+                        ];
+
+                        const n = Math.floor(Math.random() * quotes.length);
+                        document.querySelector("#quote").innerHTML = quotes[n];
                     }
 
                     randomQuote();
@@ -276,7 +281,7 @@
                                 );
                                 document.querySelector(
                                     ".suggestions"
-                                ).style.opacity = "0";
+                                ).style.display = "none";
                                 return;
                             }
                             localStorage.setItem("searchEngine", engine);
@@ -333,8 +338,8 @@
                         }
                     });
 
-                // If the query begins with engine, eng, or se while the user is typing, highlight the input box
-                //    to signify that they're performing a cool action
+                // If the query begins with engine, eng, or se while the user is typing,
+                // highlight the input box to signify that they're performing a cool action
                 queryInput.addEventListener("input", () => {
                     const query = queryInput.value;
 
@@ -348,6 +353,11 @@
                     ) {
                         searchButton.value = "Change";
                         queryInput.classList.add("highlight");
+                        document.querySelector(".suggestions").style.display =
+                            "flex";
+                        document.querySelector(
+                            ".suggestions"
+                        ).style.opacity = 1;
                     } else {
                         searchButton.value = "Search";
                         queryInput.classList.remove("highlight");
