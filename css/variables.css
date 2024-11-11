@@ -8,9 +8,9 @@
     --amog-black: #0d1117;
     --amog-black-transparent: rgba(13, 17, 23, 0.2);
     --amog-black-transparenter: rgba(13, 17, 23, 0.5);
-    --amog-black-plus: #161b22; /*i rlly like dark palettes*/
+    --amog-black-plus: #161b22; /*i really like dark palettes*/
 
     /* For accessibility - outline */
-    --amog-hightlight: rgb(255, 154, 0);
-    --amog-hightlight-transparent: rgba(255, 0, 0, 0.2);
+    --amog-highlight: rgb(255, 154, 0);
+    --amog-highlight-transparent: rgba(255, 0, 0, 0.2);
 }
