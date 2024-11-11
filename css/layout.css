@@ -3,56 +3,29 @@ body {
     background-color: var(--amog-blacky);
     color: #fff;
     font-family: "Poppins", sans-serif;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     gap: 20px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     overflow-x: hidden;
 }
 
 main {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     gap: 20px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
 }
 
 section {
     text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     gap: 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 
     width: 100vw;
@@ -64,18 +37,6 @@ hr {
     height: 2px;
     border: none;
     border-radius: 10px;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right bottom,
-        from(var(--amog-blue)),
-        to(var(--amog-green))
-    );
-    background-image: -o-linear-gradient(
-        top left,
-        var(--amog-blue),
-        var(--amog-green)
-    );
     background-image: linear-gradient(
         to bottom right,
         var(--amog-blue),
@@ -87,28 +48,16 @@ hr {
 header {
     width: 100vw;
     height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     gap: 20px;
     background-image: url(../img/sus-on-moon.jpg);
     background-position: 100% 50%;
     background-size: cover;
-    -webkit-box-shadow: 0 0 20px 0 #000;
     box-shadow: 0 0 20px 0 #000;
     text-align: center;
-    -webkit-transition: unset;
-    -o-transition: unset;
     transition: unset;
 }
 
@@ -118,18 +67,6 @@ header h1 {
 
 header h1 span {
     font-size: 70px;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right bottom,
-        from(var(--amog-green)),
-        to(var(--amog-blue))
-    );
-    background-image: -o-linear-gradient(
-        top left,
-        var(--amog-green),
-        var(--amog-blue)
-    );
     background-image: linear-gradient(
         to bottom right,
         var(--amog-green),
@@ -143,18 +80,9 @@ header h1 span {
 
 .container {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -168,28 +96,12 @@ header h1 span {
         top: -30px;
         right: 50%;
         z-index: -1;
-        -webkit-transition: all 500ms cubic-bezier(0.6, 0, 0, 1);
-        -o-transition: all 500ms cubic-bezier(0.6, 0, 0, 1);
         transition: all 500ms cubic-bezier(0.6, 0, 0, 1);
     }
 }
 
 /* Footer */
 footer {
-    background: -webkit-gradient(
-            linear,
-            left top,
-            right bottom,
-            from(var(--amog-blue-transparent)),
-            to(var(--amog-green-transparent))
-        ),
-        url("../img/airship.png");
-    background: -o-linear-gradient(
-            top left,
-            var(--amog-blue-transparent),
-            var(--amog-green-transparent)
-        ),
-        url("../img/airship.png");
     background: linear-gradient(
             to bottom right,
             var(--amog-blue-transparent),
@@ -204,8 +116,6 @@ footer {
     width: calc(100vw - 4em);
     max-width: 1200px;
     margin: 2em;
-
-    display: -ms-grid;
 
     display: grid;
     grid-template-areas:
@@ -253,15 +163,8 @@ footer {
     background-color: var(--amog-black-transparenter);
     -webkit-backdrop-filter: blur(10px) brightness(75%);
     backdrop-filter: blur(10px) brightness(75%);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
     padding: 1em;
     border-radius: 2em;
@@ -294,8 +197,6 @@ footer {
     width: auto;
     font-weight: 700;
     color: var(--amog-green);
-    -webkit-transition: all 0.25s cubic-bezier(0.6, 0, 0, 1);
-    -o-transition: all 0.25s cubic-bezier(0.6, 0, 0, 1);
     transition: all 0.25s cubic-bezier(0.6, 0, 0, 1);
 
     &:hover,
@@ -305,5 +206,9 @@ footer {
 }
 
 .footer__social {
+    grid-row: 3;
+    grid-column: 3;
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
     grid-area: social;
 }

@@ -1,17 +1,8 @@
 /* features of amogos, so cool */
 .feature {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     width: 90%;
     gap: 20px;
@@ -20,11 +11,7 @@
     overflow: hidden;
 
     &:nth-child(odd) .lbl {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
         align-items: flex-end;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
         justify-content: flex-end;
         text-align: right;
     }
@@ -36,22 +23,11 @@
 
 .feature .lbl {
     width: 60%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     gap: 20px;
 
-    -webkit-box-align: start;
-
-    -ms-flex-align: start;
-
     align-items: flex-start;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
     text-align: left;
 }
