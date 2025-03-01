@@ -1,10 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 3 version,not dead,not op_mini all
+*/
+
 nav {
     position: fixed;
     height: auto;
     z-index: 69420; /* a. */
     padding: 4px;
 
-    background-color: var(--amog-black-transparenter);
+    background-color: var(--amog-black-less-transparent);
     -webkit-backdrop-filter: blur(8px) brightness(75%) saturate(150%)
         contrast(75%);
     backdrop-filter: blur(8px) brightness(75%) saturate(150%) contrast(75%);
@@ -37,7 +44,7 @@ nav {
         }
 
         &:hover {
-            background-color: var(--amog-black-transparenter);
+            background-color: var(--amog-black-less-transparent);
         }
     }
 

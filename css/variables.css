@@ -1,14 +1,14 @@
 :root {
-    --amog-green: #66ddcc;
+    --amog-green: rgb(102, 221, 204);
     --amog-green-transparent: rgba(102, 221, 204, 0.2);
-    --amog-blue: #7289da;
+    --amog-blue: rgb(114, 137, 218);
     --amog-blue-transparent: rgba(114, 137, 218, 0.2);
-    --amog-blacky: #070a0e;
-    --amog-blacky-transparent: rgba(7, 10, 14, 0.2);
-    --amog-black: #0d1117;
+    --amog-kinda-black: rgb(7, 10, 14);
+    --amog-kinda-black-transparent: rgba(7, 10, 14, 0.2);
+    --amog-black: rgb(13, 17, 23);
     --amog-black-transparent: rgba(13, 17, 23, 0.2);
-    --amog-black-transparenter: rgba(13, 17, 23, 0.5);
-    --amog-black-plus: #161b22; /*i really like dark palettes*/
+    --amog-black-less-transparent: rgba(13, 17, 23, 0.5);
+    --amog-black-plus: rgb(22, 27, 34); /*i really like dark palettes*/
 
     /* For accessibility - outline */
     --amog-highlight: rgb(255, 154, 0);

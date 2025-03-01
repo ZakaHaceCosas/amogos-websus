@@ -1,12 +1,19 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 3 version,not dead,not op_mini all
+*/
+
 /* contributors page */
-.bois {
+.boys {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
     gap: 10px;
 }
 
-.coolboi {
+.cool-boy {
     position: relative;
     flex: 1;
     display: flex;
@@ -21,8 +28,8 @@
     background-color: var(--amog-black-transparent);
     overflow: hidden;
     aspect-ratio: 1/1;
-    -webkit-animation: coolboi-in 250ms cubic-bezier(0.6, 0, 0, 1);
-    animation: coolboi-in 250ms cubic-bezier(0.6, 0, 0, 1);
+    -webkit-animation: cool-boy-in 250ms cubic-bezier(0.6, 0, 0, 1);
+    animation: cool-boy-in 250ms cubic-bezier(0.6, 0, 0, 1);
 
     &.not1x1 {
         aspect-ratio: unset;
@@ -53,12 +60,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(1.2);
-        -webkit-filter: brightness(0.5) blur(4px) grayscale(1);
         filter: brightness(0.5) blur(4px) grayscale(1);
         width: 100%;
         position: absolute;
         z-index: -1;
-        -o-object-fit: cover;
         object-fit: cover;
     }
 
@@ -77,14 +82,13 @@
         border: solid 2px var(--amog-green);
 
         & img {
-            -webkit-filter: brightness(0.5) blur(2px) grayscale(0);
             filter: brightness(0.5) blur(2px) grayscale(0);
             transform: translate(-50%, -50%) scale(1);
         }
     }
 }
 
-@-webkit-keyframes coolboi-in {
+@-webkit-keyframes cool-boy-in {
     0% {
         opacity: 0;
         transform: scale(1);
@@ -100,7 +104,7 @@
     }
 }
 
-@keyframes coolboi-in {
+@keyframes cool-boy-in {
     0% {
         opacity: 0;
         transform: scale(1);

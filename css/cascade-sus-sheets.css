@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 3 version,not dead,not op_mini all
+*/
+
+/*
 haccing skill #2: view webpage's css files
 */
 /*
@@ -34,7 +41,7 @@ duckduckgo search engine has pretty nice minify/prettify, just search "CSS minif
 @import url("buttons.css"); /* Contains .buttons, a, etc. */
 @import url("layout.css"); /* Contains body, main, section, hr, header, footer */
 @import url("navbar.css"); /* Contains nav, #menu, .overlay */
-@import url("contributors.css"); /* Contains .coolboi, .bois */
+@import url("contributors.css"); /* Contains .cool-boy, .boys */
 @import url("features.css"); /* Contains styles for features */
 @import url("sussify.css"); /* Contains specific styles for the downloads page */
 @import url("media-queries.css"); /* why each sussy display has a different size oh my lord */

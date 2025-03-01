@@ -54,7 +54,7 @@ async function getContributors(org, repo) {
  * @returns {Promise<void>}
  */
 async function populateContributors() {
-    const organisation = `amog-os`;
+    const organization = `amog-os`;
     const repos = [
         `AmogOS`,
         `AmogOStopPat`,
@@ -66,7 +66,7 @@ async function populateContributors() {
 
     for (let i = 0; i < repos.length; i++) {
         const repo = repos[i];
-        const repoContributors = await getContributors(organisation, repo);
+        const repoContributors = await getContributors(organization, repo);
         contributors = contributors.concat(repoContributors);
     }
 
@@ -89,7 +89,7 @@ async function populateContributors() {
         }
 
         const coolBoi = document.createElement(`div`);
-        coolBoi.classList.add(`coolboi`);
+        coolBoi.classList.add(`cool-boy`);
 
         const img = document.createElement(`img`);
         img.src = contributor.avatar_url;

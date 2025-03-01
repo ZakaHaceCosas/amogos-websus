@@ -1,8 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 3 version,not dead,not op_mini all
+*/
+
 @media prefers-reduced-motion {
     * {
         /*noinspection CssUnknownProperty*/
-        -webkit-transition: none !important;
-        -o-transition: none !important;
         transition: none !important;
         scroll-behavior: auto !important;
     }
@@ -131,7 +136,6 @@
         position: static;
         width: 100%;
         height: auto;
-        -o-object-fit: scale-down;
         object-fit: scale-down;
         z-index: auto;
     }
